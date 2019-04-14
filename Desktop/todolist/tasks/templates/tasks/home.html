@@ -1,0 +1,10 @@
+<html>
+<h1>Welcome To The To-do-List</h1>
+<a href = "{% url 'tasks:add_task' %}">Add a task here</a>
+<h2>List of Tasks</h2>
+<ul>
+{% for task in all_tasks %}
+<li><a href = " {% url 'tasks:detail' task.id %}">{{task}}</a></li>
+{% endfor %}
+</ul>
+</html>

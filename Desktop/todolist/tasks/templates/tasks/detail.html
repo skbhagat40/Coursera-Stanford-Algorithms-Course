@@ -1,0 +1,13 @@
+<html>
+<a href = "{% url 'tasks:homepage'%}">Home</a>
+<h1>{{task}}</h1>
+<h2>{{task.Description}}</h2>
+<h2>Due date {{task.DueDate}}</h2>
+<br>
+<ul>
+<li>
+<a href = "{% url 'tasks:update_task' task.id %}">Edit Task</a></li>
+<li>
+<a href = "{% url 'tasks:delete_task' task.id %}">Delete Task</a></li>
+</ul>
+</html>
