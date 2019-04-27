@@ -1,0 +1,58 @@
+So , In django rest framework in default IsOwnerOrReadOnly implementation property is used in BlogPost model to return user whenever whenever
+owner is asked.
+For Example,
+
+class BlogPostModel(models.Model):
+    user = models.ForiegnKey(User,on_delete = MODEL.CASCADE) # one of the ways to set it is def validate(*args,**kwargs): self.instance.user = self.request.user
+    author = models.CharField(max_length = 10)
+
+    @property
+    def owner(self):
+        return self.user
+    # this is equivalent to owner = property(fget=owner())
+    # so whenever someone asks for owner it will return the value of user
+
+Basic concept behind Mixins:
+Mixins are used to provide extra functionality to an existing class some extra functionality
+This is based on principle of inheritance , i.e. whenever an object or method is not present a class's current scope it will look on parent's
+class variables and methods.
+IMP - child can't access parent instance variables, but it can acess parent's class var.
+if access using self(child's self) , if we try to modify it will create a new variable. # if we want to modify parent class var use ParentClassName.varName
+
+class child(parent1,parent2):
+# first method is looked in parent1 and it's parent if present and then parent2 and it's parent.
+So, Mixins are always placed on the left and base class on the right
+
+# Mixin example to modify query set based on passed arguments
+
+Class MyCustomMixin():
+    def get_obeject(self # self to access current object's all parametres associated to self):
+    queryset = self.get_queryset()
+    filter = {}
+    for field in self.lookup_fields: # this is the class variable of children class
+        if self.kwargs[field]:
+            filter[field] = self.kwargs.get(field)
+     obj = get_obj_or_404(queryset,**filter)
+     return obj
+
+# some django decorators
+@login required , LoginRequiredMixin -> settings.LOGIN,settings.LOGIN_REDIRECT ,next
+@user_pass_tests -> let's you implement your custom user validation
+
+# getting query value from url
+
+query = self.request.get("q") # gets the following thing ?q="query"
+
+Basics of API Implementation
+
+1. creat views CRUD using django rest framework base views
+2. create serializer -> specify model , filds , read_only_fields.
+for read only fields
+def submit : -> serializer.save(user=self.request.user)
+clean,vaildate method
+qs = //
+if self.instance
+qs.exclude(pk=sefl.pk)
+if qs.exists() -> raise serializer exception
+3. add permissions and permission classes
+
