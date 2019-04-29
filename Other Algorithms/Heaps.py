@@ -1,5 +1,5 @@
 '''Here We will implement heap data structure.
-1. A heap is a perfectly balanced Binary  Tree , the parent is always smaller than it's children
+1. A heap is a perfectly balanced Binary  Tree , the parent is always smaller than it's children in Min Heap
 2. Supports O(1) min/max extract operation depending on type of Heap i.e. min Heap of max Heap
 3. Here we will implement following methods :-
    a. Peek - returns the min/max value
@@ -54,6 +54,7 @@ class Heap(object):
     def poll(self):
         index = 0
         self.items[0] = self.items[-1]
+        del self.items[-1]
         self.size -= 1
         self.heapify_down()
         return self.items[index]
@@ -68,6 +69,7 @@ class Heap(object):
         while self.has_parent(index) and self.get_parent(index)>self.items[index]:
             parent_index = self.get_parent_index(index)
             self.items[parent_index],self.items[index] = self.items[index],self.items[parent_index]
+            index = self.get_parent_index(index)
 
     def heapify_down(self):
         index = 0
@@ -79,7 +81,7 @@ class Heap(object):
                 break
             else:
                 self.items[index],self.items[smaller_child_index] = self.items[smaller_child_index],self.items[index]
-                index = smaller_child_index
+            index = smaller_child_index
 
 # let's test this heap
 h = Heap()
@@ -94,4 +96,7 @@ assert h.peek() == 1
 a = h.poll()
 print("smallest element in the heap after polling is :",h.peek())
 assert h.peek() == 4
+h.add_item(0)
+#assert h.peek() == 0
+print("smallest item is now",h.peek())
 # all good thanks! :)
