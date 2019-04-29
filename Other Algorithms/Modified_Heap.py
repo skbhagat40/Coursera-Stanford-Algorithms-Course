@@ -1,14 +1,7 @@
-'''Here We will implement heap data structure.
-1. A heap is a perfectly balanced Binary  Tree , the parent is always smaller than it's children in Min Heap
-2. Supports O(1) min/max extract operation depending on type of Heap i.e. min Heap of max Heap
-3. Here we will implement following methods :-
-   a. Peek - returns the min/max value
-   b. Pool - returns and deletes min/max value
-   c. Add - adds an Elemnt to the heap. Element is added to the Next empty position i.e. top to bottom left to right.
-Here we will use array to represent Heap. LeftChild = 2*index +1 , RightChild = 2*index+2. Parent = (index-1)//2 .'''
+'''Here we will implement modified version of the Heap
+It will support deletion of elements from middle of the Heap also.
+We will use this implementation in Dijkstra's Shortest Path Algorithm'''
 
-
-# let's begin
 class Heap(object):
     def __init__(self):
         self.size = 0
@@ -82,23 +75,50 @@ class Heap(object):
             else:
                 self.items[index], self.items[smaller_child_index] = self.items[smaller_child_index], self.items[index]
             index = smaller_child_index
+# we will modify our existing heap implementation and add extra functionality to it.
 
+class ModifiedHeap(Heap):
+    def __init__(self):
+        super().__init__()
 
-if __name__ == '__main__':
-    # let's test this heap
-    h = Heap()
-    h.add_item(4)
-    h.add_item(1)
-    h.add_item(8)
-    h.add_item(7)
-    print("smallest element in the heap is :", h.peek())
-    assert h.peek() == 1
-    # add_item and peak works !
-    # let's check if poll works or not
-    a = h.poll()
-    print("smallest element in the heap after polling is :", h.peek())
-    assert h.peek() == 4
-    h.add_item(0)
-    assert h.peek() == 0
-    print("smallest item is now", h.peek())
-    # all good thanks! :)
+    def heapify_up_modified(self, index):
+        # index = self.size - 1
+        while self.has_parent(index) and self.get_parent(index) > self.items[index]:
+            parent_index = self.get_parent_index(index)
+            self.items[parent_index], self.items[index] = self.items[index], self.items[parent_index]
+            index = self.get_parent_index(index)
+
+    def heapify_down_modified(self, index):
+        # index = 0
+        while self.has_left_child(index):
+            smaller_child_index = self.get_left_child_index(index)
+            if self.has_right_child(index) and self.get_right_child(index) < self.items[smaller_child_index]:
+                smaller_child_index = self.get_right_child_index(index)
+            if self.items[index] < self.items[smaller_child_index]:
+                break
+            else:
+                self.items[index], self.items[smaller_child_index] = self.items[smaller_child_index], self.items[index]
+            index = smaller_child_index
+
+    def delete_node_modified(self, index):
+        ''' Deletes a Node at a given Index. Input is the index of the Node. Modifies the heap. Output is None.
+        Steps - 1. Swap the element at current index with the element at the last index
+                2. Delete the element at the last index . Decrease the size of the Heap.
+                3. Heapify Up and Heapify Down'''
+        self.items[index], self.items[-1] = self.items[-1], self.items[index]
+        del self.items[-1]
+        self.size -= 1
+        self.heapify_up_modified(index)
+        self.heapify_down_modified(index)
+
+# let's check if it is working correctly.
+h = ModifiedHeap()
+h.add_item(6)
+h.add_item(4)
+h.add_item(0)
+h.add_item(24)
+h.add_item(7)
+assert h.peek() == 0
+print(h.items)
+h.delete_node_modified(2)
+print(h.items)
