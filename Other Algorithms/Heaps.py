@@ -97,6 +97,6 @@ a = h.poll()
 print("smallest element in the heap after polling is :",h.peek())
 assert h.peek() == 4
 h.add_item(0)
-#assert h.peek() == 0
+assert h.peek() == 0
 print("smallest item is now",h.peek())
 # all good thanks! :)
