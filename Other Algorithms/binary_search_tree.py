@@ -60,10 +60,11 @@ class BTree(object):
             path = path + [current.val]
             self.max.append(len(path))
             print("path", path)
-            print(current.val)
+
             left = self.dfs_traversal_helper(current.left, path)
 
             right = self.dfs_traversal_helper(current.right, path)
+            print(current.val)
 
 
 root = tp.pop(0)

@@ -52,12 +52,12 @@ class Heap(object):
             return self.items[0]
 
     def poll(self):
-        index = 0
+        to_ret = self.items[0]
         self.items[0] = self.items[-1]
         del self.items[-1]
         self.size -= 1
         self.heapify_down()
-        return self.items[index]
+        return to_ret
 
     def add_item(self, value):
         self.items.append(value)
