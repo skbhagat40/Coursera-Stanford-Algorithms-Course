@@ -104,7 +104,7 @@ class MaxHeap(MinHeap):
 
 # Let's test the MaxHeap
 h = MaxHeap()
-items = [9, 5, 33, 45, 8, 66, 76, 100]
+items = [9, 5, 33, 45, 8, 66, 76, 100,4,2]
 for el in items:
     h.add_item(el)
 assert h.peek() == 100
@@ -144,4 +144,11 @@ def getMedian(arr):
 l, h = getMedian(items)
 print("lower half and upper half are")
 print(l.peek(), h.peek())
+if len(l.items)>len(h.items):
+    print("median is ",l.peek())
+elif len(l.items)<len(h.items):
+    print("median is",h.peek())
+else:
+    print("there's a tie")
+    print('medians are',l.peek(),h.peek())
 print(sorted(items))
