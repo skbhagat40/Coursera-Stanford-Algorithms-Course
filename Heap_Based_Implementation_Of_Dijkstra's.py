@@ -5,7 +5,7 @@ from math import inf
 '''Here we will implement modified version of the Heap
 It will support deletion of elements from middle of the Heap also.
 We will use this implementation in Dijkstra's Shortest Path Algorithm'''
-
+# let's try to add a map that will store vertex value and it's position in the heap array.
 
 class HeapNode(object):
     def __init__(self, value=None, key=None):
@@ -20,6 +20,7 @@ class Heap(object):
     def __init__(self):
         self.size = 0
         self.items = []  # an array that will store heap nodes
+        self.map = {} # a dictionary that will store heap node value and it's position in the heap array.
 
     @staticmethod
     def get_left_child_index(index):
@@ -77,7 +78,7 @@ class Heap(object):
             parent_index = self.get_parent_index(index)
             self.items[parent_index], self.items[index] = self.items[index], self.items[parent_index]
             index = self.get_parent_index(index)
-
+            self.map[self.items[self.size - 1].value] = index
     def heapify_down(self):
         index = 0
         while self.has_left_child(index):
@@ -89,7 +90,7 @@ class Heap(object):
             else:
                 self.items[index], self.items[smaller_child_index] = self.items[smaller_child_index], self.items[index]
             index = smaller_child_index
-
+            self.map[self.items[0].value] = index
 
 # we will modify our existing heap implementation and add extra functionality to it.
 
@@ -99,20 +100,24 @@ class ModifiedHeap(Heap):
 
     def heapify_up_modified(self, index):
         # index = self.size - 1
+        orig = index
         try:
             while self.has_parent(index) and self.get_parent(index).key > self.items[index].key:
                 parent_index = self.get_parent_index(index)
                 self.items[parent_index], self.items[index] = self.items[index], self.items[parent_index]
                 index = self.get_parent_index(index)
+                self.map[self.items[orig].value] = index
         except:
             pass
 
     def heapify_down_modified(self, index):
         # index = 0
+        orig = index
         try:
             while self.has_left_child(index):
                 smaller_child_index = self.get_left_child_index(index)
-                if self.has_right_child(index) and self.get_right_child(index).key < self.items[smaller_child_index].key:
+                if self.has_right_child(index) and self.get_right_child(index).key < self.items[
+                    smaller_child_index].key:
                     smaller_child_index = self.get_right_child_index(index)
                 if self.items[index].key < self.items[smaller_child_index].key:
                     break
@@ -120,15 +125,24 @@ class ModifiedHeap(Heap):
                     self.items[index], self.items[smaller_child_index] = self.items[smaller_child_index], self.items[
                         index]
                 index = smaller_child_index
+                self.map[self.items[orig].value] = index
         except:
             pass
 
     def delete_node_modified(self, value):
         for i, e in enumerate(self.items):
             if e.value == value:
-                #print("index",i,"value at index",self.items[i].value)
+                # print("index",i,"value at index",self.items[i].value)
                 index = i
                 break
+        # try:
+        #     index = self.map[value]
+        # except:
+        #     for i, e in enumerate(self.items):
+        #         if e.value == value:
+        #             # print("index",i,"value at index",self.items[i].value)
+        #             index = i
+        #             break
         ''' Deletes a Node at a given Index. Input is the index of the Node. Modifies the heap. Output is None.
         Steps - 1. Swap the element at current index with the element at the last index
                 2. Delete the element at the last index . Decrease the size of the Heap.
@@ -169,7 +183,7 @@ for line in data:
         temp = el.split(",")
         graph[node].append(int(temp[0]))
         edge_cost[node].append(int(temp[1]))
-print("graph",graph[:5])
+print("graph", graph[:5])
 # graph = [[1, 2], [3], [6, 4], [4, 6], [5], [6], []]
 # edge_cost = [[2, 3], [5], [2, 2], [1, 4], [2], [3]]
 over_head = [inf] * num_nodes
@@ -185,8 +199,8 @@ def dijkstra(source):
     conquered[source] = True
     seen.add(source)
     over_head[source] = 0
-    #h.delete_node_modified(source)
-    h.add_item(HeapNode(source,0))
+    # h.delete_node_modified(source)
+    h.add_item(HeapNode(source, 0))
     # for index, child in enumerate(graph[source]):
     #     if child not in seen:
     #         # constructing heap node
@@ -208,19 +222,19 @@ def dijkstra(source):
         seen.add(w_star)
         conquered[w_star] = True
         over_head[w_star] = w.key
-        #print("overhead for",w.value,w.key)
-        for index,child in enumerate(graph[w_star]):
+        # print("overhead for",w.value,w.key)
+        for index, child in enumerate(graph[w_star]):
             if not conquered[child]:
-                new_over_head = over_head[w_star]+edge_cost[w_star][index]
+                new_over_head = over_head[w_star] + edge_cost[w_star][index]
                 if new_over_head >= over_head[child]:
                     continue
                 else:
-                    #print("deleting",child)
+                    # print("deleting",child)
                     h.delete_node_modified(child)
                     new_cost = new_over_head
-                    #print("modifying child",child,new_cost)
+                    # print("modifying child",child,new_cost)
                     over_head[child] = new_cost
-                    h.add_item(HeapNode(child,new_cost))
+                    h.add_item(HeapNode(child, new_cost))
 
 
 dijkstra(1)
@@ -229,8 +243,8 @@ print(over_head)
 print("heap after dijkstra's operation")
 for el in h.items:
     print(el)
-print("over_head",over_head)
+print("over_head", over_head)
 res = []
-for el in [7,37,59,82,99,115,133,165,188,197]:
+for el in [7, 37, 59, 82, 99, 115, 133, 165, 188, 197]:
     res.append(over_head[el])
-print("r",res)
+print("r", res)
