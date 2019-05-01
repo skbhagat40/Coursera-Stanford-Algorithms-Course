@@ -100,13 +100,48 @@ class MaxHeap(MinHeap):
             else:
                 self.items[index], self.items[smaller_child_index] = self.items[smaller_child_index], self.items[index]
             index = smaller_child_index
+
+
 # Let's test the MaxHeap
 h = MaxHeap()
-items = [9,5,33,45,8,66,76,100]
+items = [9, 5, 33, 45, 8, 66, 76, 100]
 for el in items:
     h.add_item(el)
-assert h.peek()==100
+assert h.peek() == 100
 print("peek works fine !")
 h.poll()
-assert h.peek()==76
+assert h.peek() == 76
 print("poll works fine !")
+
+
+def check_balancing(lower_half, upper_half):
+    if len(lower_half.items) - len(upper_half.items) >= 2:
+        i = lower_half.poll()
+        upper_half.add_item(i)
+    elif len(upper_half.items) - len(lower_half.items) >= 2:
+        i = upper_half.poll()
+        lower_half.add_item(i)
+
+
+# let's try to implement get_median using min heap and max heap !.
+def getMedian(arr):
+    lower_half = MaxHeap()
+    upper_half = MinHeap()
+    el1, el2 = arr[0], arr[1]
+    sorts = sorted([el1, el2])
+    arr = arr[2:]
+    lower_half.add_item(sorts[0])
+    upper_half.add_item(sorts[1])
+    for el in arr:
+        if el < lower_half.peek():
+            lower_half.add_item(el)
+        else:
+            upper_half.add_item(el)
+        check_balancing(lower_half, upper_half)
+    return lower_half, upper_half
+
+
+l, h = getMedian(items)
+print("lower half and upper half are")
+print(l.peek(), h.peek())
+print(sorted(items))
