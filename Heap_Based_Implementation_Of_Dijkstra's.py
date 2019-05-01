@@ -124,8 +124,9 @@ class ModifiedHeap(Heap):
             pass
 
     def delete_node_modified(self, value):
-        for i, e in enumerate(h.items):
+        for i, e in enumerate(self.items):
             if e.value == value:
+                #print("index",i,"value at index",self.items[i].value)
                 index = i
                 break
         ''' Deletes a Node at a given Index. Input is the index of the Node. Modifies the heap. Output is None.
@@ -140,17 +141,17 @@ class ModifiedHeap(Heap):
 
 
 # Let's check if our implementation of Heap based on Heap Node is working correctly or not.
-h = ModifiedHeap()
-h.add_item(HeapNode(4, 9))
-h.add_item(HeapNode(1, 6))
-h.add_item(HeapNode(8, 5))
-h.add_item(HeapNode(7, 2))
-h.add_item(HeapNode(9, 0))
-h.poll()
-h.delete_node_modified(1)
-print("finally the heap structure is")
-for el in h.items:
-    print(el)
+# h = ModifiedHeap()
+# h.add_item(HeapNode(4, 9))
+# h.add_item(HeapNode(1, 6))
+# h.add_item(HeapNode(8, 5))
+# h.add_item(HeapNode(7, 2))
+# h.add_item(HeapNode(9, 0))
+# h.poll()
+# h.delete_node_modified(1)
+# print("finally the heap structure is")
+# for el in h.items:
+#     print(el)
 # ok! it's working correctly.
 
 # let's try to implement dijkstra algorithm using out Heap.
@@ -168,6 +169,7 @@ for line in data:
         temp = el.split(",")
         graph[node].append(int(temp[0]))
         edge_cost[node].append(int(temp[1]))
+print("graph",graph[:5])
 # graph = [[1, 2], [3], [6, 4], [4, 6], [5], [6], []]
 # edge_cost = [[2, 3], [5], [2, 2], [1, 4], [2], [3]]
 over_head = [inf] * num_nodes
@@ -175,46 +177,54 @@ over_head = [inf] * num_nodes
 conquered = [False] * num_nodes
 seen = set()
 for el in range(num_nodes):
-    h.add_item(HeapNode(el, inf))
+    if el != 1:
+        h.add_item(HeapNode(el, inf))
 
 
 def dijkstra(source):
     conquered[source] = True
     seen.add(source)
     over_head[source] = 0
-    for index, child in enumerate(graph[source]):
-        if child not in seen:
-            # constructing heap node
-            h.delete_node_modified(child)
-            key_child = over_head[source] + edge_cost[source][index]
-            h.add_item(HeapNode(child, key_child))
+    #h.delete_node_modified(source)
+    h.add_item(HeapNode(source,0))
+    # for index, child in enumerate(graph[source]):
+    #     if child not in seen:
+    #         # constructing heap node
+    #         h.delete_node_modified(child)
+    #         key_child = over_head[source] + edge_cost[source][index]
+    #         h.add_item(HeapNode(child, key_child))
     # Now our dijkstra's algorithm is initialized.
     # Next Steps that follow are -
     # 1. First We Do Polling.
     # 2. We look for children of the vertex we get after polling
     # 3. We update the keys of children if possible.
     # 4. We update over_head,conquered and seen
-    print("heap after first add operation")
-    for el in h.items:
-        print(el)
-    while len(seen) != num_nodes:
+    # print("heap after first add operation")
+    # for el in h.items:
+    #     print(el)
+    while len(h.items) != 0:
         w = h.poll()
         w_star = w.value
         seen.add(w_star)
         conquered[w_star] = True
         over_head[w_star] = w.key
+        #print("overhead for",w.value,w.key)
         for index,child in enumerate(graph[w_star]):
-            if child not in seen:
+            if not conquered[child]:
                 new_over_head = over_head[w_star]+edge_cost[w_star][index]
-                if new_over_head > over_head[child]:
-                    break
+                if new_over_head >= over_head[child]:
+                    continue
                 else:
+                    #print("deleting",child)
                     h.delete_node_modified(child)
                     new_cost = new_over_head
+                    #print("modifying child",child,new_cost)
+                    over_head[child] = new_cost
                     h.add_item(HeapNode(child,new_cost))
 
 
 dijkstra(1)
+print(over_head)
 # after first polling operation the structure of the heap is :-
 print("heap after dijkstra's operation")
 for el in h.items:
@@ -223,4 +233,4 @@ print("over_head",over_head)
 res = []
 for el in [7,37,59,82,99,115,133,165,188,197]:
     res.append(over_head[el])
-print(res)
+print("r",res)

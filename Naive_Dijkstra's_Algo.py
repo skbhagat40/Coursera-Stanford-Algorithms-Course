@@ -8,23 +8,23 @@ Runtime Complexity is O(m*n) where m = no. of edges , n = no. of vertices'''
 from math import inf
 
 # print("hello")
-# file = open(r'C:\Users\skbha\videos\dijkstra.txt')
-# data = file.readlines()
-# num_nodes = 201
-# graph = [[] for el in range(num_nodes)]
-# edge_cost = [[] for el in range(num_nodes)]
-# for line in data:
-#     items = line.split()
-#     node = int(items[0])
-#     for el in items[1:]:
-#         temp = el.split(",")
-#         graph[node].append(int(temp[0]))
-#         edge_cost[node].append(int(temp[1]))
+file = open(r'C:\Users\skbha\videos\dijkstra.txt')
+data = file.readlines()
+num_nodes = 201
+graph = [[] for el in range(num_nodes)]
+edge_cost = [[] for el in range(num_nodes)]
+for line in data:
+    items = line.split()
+    node = int(items[0])
+    for el in items[1:]:
+        temp = el.split(",")
+        graph[node].append(int(temp[0]))
+        edge_cost[node].append(int(temp[1]))
 # print(graph,edge_cost)
 # print("carry on")
-num_nodes =7
-graph = [[1, 2], [3], [6, 4], [4, 6], [5], [6], []]
-edge_cost = [[2, 3], [5], [2, 2], [1, 4], [2], [3]]
+# num_nodes =7
+# graph = [[1, 2], [3], [6, 4], [4, 6], [5], [6], []]
+# edge_cost = [[2, 3], [5], [2, 2], [1, 4], [2], [3]]
 # graph = [[],[2,8],[1,3],[2,4],[3,5],[4,6],[5,7],[6,8],[7,1]]
 # edge_cost = [[],[1,2],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,2]]
 over_head = [inf] * num_nodes
@@ -56,10 +56,10 @@ def dijkstra(source):
             seen.add(selected)
             over_head[selected] = minimum
 
-        # res = []
-        # for el in [7,37,59,82,99,115,133,165,188,197]:
-        #     res.append(over_head[el])
-        # print(res)
+        res = []
+        for el in [7,37,59,82,99,115,133,165,188,197]:
+            res.append(over_head[el])
+        print(res)
 
 
 
