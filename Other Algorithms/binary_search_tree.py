@@ -142,3 +142,76 @@ b.delete_item(5)
 print("after deleting 5 from the tree , tree becomes : ")
 b.dfs_traversal()
 # easy case works fine.
+# working code !!
+# def dfs_helper(self, current):
+#     if current is not None:
+#         left = self.dfs_helper(current.left)
+#
+#         right = self.dfs_helper(current.right)
+#         self.nodes.append(current.val)
+
+
+# def delete(self, value):
+#     self.delete_helper(self.root, value, None, None)
+#
+#
+# def delete_helper(self, current, value, parent, dir):
+#     if current is not None and current.val == value:
+#         print("found", current.val)
+#         # check if leaf node
+#         if current.left is None and current.right is None:
+#             if parent is None:
+#                 self.root = current
+#             else:
+#                 if dir == 'r':
+#                     parent.right = None
+#                 else:
+#                     parent.left = None
+#         elif current.left is not None and current.right is None:
+#             if parent is None:
+#                 self.root = current.left
+#             else:
+#                 if dir == 'r':
+#                     parent.right = current.left
+#                 else:
+#                     parent.left = current.left
+#         elif current.right is not None and current.left is None:
+#             if parent is None:
+#                 self.root = current.right
+#             else:
+#                 if dir == "r":
+#                     parent.right = current.right
+#                 else:
+#                     parent.left = current.right
+#         elif current.left is not None and current.right is not None:
+#             # do swap and delete :)
+#             if parent is None:
+#                 # replace with left predecessor
+#                 curr = self.root
+#                 prev = None
+#                 while curr.left:
+#                     prev = curr
+#                     curr = curr.left
+#                 self.root.val = curr.val
+#                 if curr.right is not None:
+#                     prev.left = curr.right
+#                 else:
+#                     prev.left = None
+#             else:
+#                 curr = current
+#                 prev = None
+#                 while curr.left:
+#                     prev = curr
+#                     curr = curr.left
+#                 parent.val = curr.val
+#
+#                 if curr.right is not None:
+#                     prev.left = curr.right
+#                 else:
+#                     prev.left = None
+#     else:
+#         if current is not None:
+#             if current.val < value:
+#                 right = self.delete_helper(current.right, value, current, 'r')
+#             else:
+#                 left = self.delete_helper(current.left, value, current, 'l')

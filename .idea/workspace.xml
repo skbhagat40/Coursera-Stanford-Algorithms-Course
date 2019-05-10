@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9394372-3a16-4c2a-8da5-d3735322e083" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/median_maint.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Other Algorithms/binary_search_tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/Other Algorithms/binary_search_tree.py" afterDir="false" />
     </list>
@@ -26,8 +27,8 @@
       <file leaf-file-name="Naive_Dijkstra's_Algo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Naive_Dijkstra's_Algo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1139">
-              <caret line="67" selection-start-line="67" selection-end-line="67" />
+            <state relative-caret-position="170">
+              <caret line="10" selection-start-line="10" selection-end-line="11" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -41,11 +42,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="binary_search_tree.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="binary_search_tree.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Other Algorithms/binary_search_tree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="141" column="23" selection-start-line="141" selection-start-column="23" selection-end-line="141" selection-end-column="23" />
+            <state relative-caret-position="85">
+              <caret line="144" column="17" selection-start-line="144" selection-start-column="17" selection-end-line="144" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="median_maint.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/median_maint.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -53,7 +63,7 @@
       <file leaf-file-name="HeapSort.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HeapSort.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1428">
+            <state relative-caret-position="363">
               <caret line="84" selection-start-line="84" selection-start-column="2" selection-end-line="84" selection-end-column="17" />
             </state>
           </provider>
@@ -62,8 +72,8 @@
       <file leaf-file-name="GetMedian_heaps.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GetMedian_heaps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1802">
-              <caret line="106" column="20" selection-start-line="106" selection-start-column="20" selection-end-line="106" selection-end-column="20" />
+            <state relative-caret-position="255">
+              <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -80,7 +90,6 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>true</find>
-      <find>arr</find>
       <find>print</find>
       <find>copy</find>
       <find>global</find>
@@ -89,11 +98,12 @@
       <find>49</find>
       <find>2</find>
       <find>overhead for 2</find>
-      <find>overhead for 2</find>
       <find>modifying child 2</find>
       <find>overhead for 3</find>
-      <find>modifying child 2</find>
       <find>modifying child 3</find>
+      <find>arr</find>
+      <find>items</find>
+      <find>median</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -140,8 +150,9 @@
         <option value="$PROJECT_DIR$/Other Algorithms/binary_search.py" />
         <option value="$PROJECT_DIR$/Other Algorithms/Heaps.py" />
         <option value="$PROJECT_DIR$/HeapSort.py" />
-        <option value="$PROJECT_DIR$/GetMedian_heaps.py" />
         <option value="$PROJECT_DIR$/Other Algorithms/binary_search_tree.py" />
+        <option value="$PROJECT_DIR$/GetMedian_heaps.py" />
+        <option value="$PROJECT_DIR$/median_maint.py" />
       </list>
     </option>
   </component>
@@ -192,7 +203,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.binary_search_tree">
+  <component name="RunManager" selected="Python.median_maint">
     <configuration name="GetMedian_heaps" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="courseraAlgo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -224,24 +235,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HeapSort.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="Heap_Based_Implementation_Of_Dijkstra's" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="courseraAlgo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Heap_Based_Implementation_Of_Dijkstra's.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -283,20 +276,38 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="median_maint" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="courseraAlgo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/median_maint.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list>
-      <item itemvalue="Python.Heap_Based_Implementation_Of_Dijkstra's" />
       <item itemvalue="Python.binary_search" />
       <item itemvalue="Python.binary_search_tree" />
       <item itemvalue="Python.HeapSort" />
       <item itemvalue="Python.GetMedian_heaps" />
+      <item itemvalue="Python.median_maint" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.median_maint" />
         <item itemvalue="Python.binary_search_tree" />
         <item itemvalue="Python.GetMedian_heaps" />
         <item itemvalue="Python.HeapSort" />
         <item itemvalue="Python.binary_search" />
-        <item itemvalue="Python.Heap_Based_Implementation_Of_Dijkstra's" />
       </list>
     </recent_temporary>
   </component>
@@ -359,13 +370,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sccs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/StrongConnectedComponents.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
@@ -490,13 +494,6 @@
     <entry file="file://$PROJECT_DIR$/subsets.py" />
     <entry file="file://$PROJECT_DIR$/dfs.py" />
     <entry file="file://$PROJECT_DIR$/Topological_Sort.py" />
-    <entry file="file://$PROJECT_DIR$/closest_points_2d.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/strassen_multiplication.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
@@ -609,13 +606,6 @@
     <entry file="file://$PROJECT_DIR$/abc.txt" />
     <entry file="file://$PROJECT_DIR$/Other Algorithms/abcd.txt" />
     <entry file="file://$PROJECT_DIR$/Other Algorithms/abcd1.txt" />
-    <entry file="file://$PROJECT_DIR$/Naive_Dijkstra's_Algo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Other Algorithms/binary_search.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -630,13 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HeapSort.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="84" selection-start-line="84" selection-start-column="2" selection-end-line="84" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Other Algorithms/Heaps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -644,17 +627,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GetMedian_heaps.py">
+    <entry file="file://$PROJECT_DIR$/closest_points_2d.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="106" column="20" selection-start-line="106" selection-start-column="20" selection-end-line="106" selection-end-column="20" />
+        <state relative-caret-position="-623">
+          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Other Algorithms/binary_search_tree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="141" column="23" selection-start-line="141" selection-start-column="23" selection-end-line="141" selection-end-column="23" />
+        <state relative-caret-position="85">
+          <caret line="144" column="17" selection-start-line="144" selection-start-column="17" selection-end-line="144" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Naive_Dijkstra's_Algo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HeapSort.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="84" selection-start-line="84" selection-start-column="2" selection-end-line="84" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GetMedian_heaps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/median_maint.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
         </state>
       </provider>
     </entry>
