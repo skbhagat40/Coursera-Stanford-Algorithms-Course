@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9394372-3a16-4c2a-8da5-d3735322e083" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/median_maint.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2sum.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Other Algorithms/binary_search_tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/Other Algorithms/binary_search_tree.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,65 +14,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Heaps.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Other Algorithms/Heaps.py">
+      <file leaf-file-name="2sum.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/2sum.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="83" selection-end-column="39" />
+              <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Naive_Dijkstra's_Algo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Naive_Dijkstra's_Algo.py">
+      <file leaf-file-name="Tries.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Other Algorithms/Tries.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" selection-start-line="10" selection-end-line="11" selection-end-column="23" />
+            <state relative-caret-position="357">
+              <caret line="74" column="78" lean-forward="true" selection-start-line="74" selection-start-column="78" selection-end-line="74" selection-end-column="78" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Heap_Based_Implementation_Of_Dijkstra's.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Heap_Based_Implementation_Of_Dijkstra's.py">
+      <file leaf-file-name="sccs.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sccs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4063">
-              <caret line="239" column="11" selection-start-line="239" selection-start-column="11" selection-end-line="239" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="binary_search_tree.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Other Algorithms/binary_search_tree.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="144" column="17" selection-start-line="144" selection-start-column="17" selection-end-line="144" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="median_maint.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/median_maint.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HeapSort.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HeapSort.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="84" selection-start-line="84" selection-start-column="2" selection-end-line="84" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GetMedian_heaps.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GetMedian_heaps.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+            <state relative-caret-position="31">
+              <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -97,10 +60,10 @@
       <find>end</find>
       <find>49</find>
       <find>2</find>
-      <find>overhead for 2</find>
-      <find>modifying child 2</find>
-      <find>overhead for 3</find>
-      <find>modifying child 3</find>
+      <find />
+      <find />
+      <find />
+      <find />
       <find>arr</find>
       <find>items</find>
       <find>median</find>
@@ -153,6 +116,7 @@
         <option value="$PROJECT_DIR$/Other Algorithms/binary_search_tree.py" />
         <option value="$PROJECT_DIR$/GetMedian_heaps.py" />
         <option value="$PROJECT_DIR$/median_maint.py" />
+        <option value="$PROJECT_DIR$/2sum.py" />
       </list>
     </option>
   </component>
@@ -203,7 +167,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.median_maint">
+  <component name="RunManager" selected="Python.2sum">
+    <configuration name="2sum" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="courseraAlgo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2sum.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="GetMedian_heaps" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="courseraAlgo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -235,24 +217,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HeapSort.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="binary_search" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="courseraAlgo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Other Algorithms" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Other Algorithms/binary_search.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -295,19 +259,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.binary_search" />
       <item itemvalue="Python.binary_search_tree" />
       <item itemvalue="Python.HeapSort" />
       <item itemvalue="Python.GetMedian_heaps" />
       <item itemvalue="Python.median_maint" />
+      <item itemvalue="Python.2sum" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.2sum" />
         <item itemvalue="Python.median_maint" />
         <item itemvalue="Python.binary_search_tree" />
         <item itemvalue="Python.GetMedian_heaps" />
         <item itemvalue="Python.HeapSort" />
-        <item itemvalue="Python.binary_search" />
       </list>
     </recent_temporary>
   </component>
@@ -325,15 +289,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4987775" visible="true" weight="0.19866072" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987775" visible="true" weight="0.19866072" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5014881" side_tool="true" weight="0.32569557" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32838285" />
       <window_info anchor="bottom" id="Python Console" order="8" weight="0.32673267" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49925596" visible="true" weight="0.3250825" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49925596" weight="0.3250825" />
       <window_info id="Structure" order="1" sideWeight="0.5012225" side_tool="true" weight="0.19866072" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.26567656" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -354,7 +318,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Other Algorithms/Heaps.py</url>
+          <url />
           <line>70</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -370,13 +334,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/StrongConnectedComponents.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="58" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/small_check.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -571,25 +528,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Other Algorithms/Tries.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="88" column="28" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Other Algorithms/__init__.py" />
     <entry file="file://$PROJECT_DIR$/small_check.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" selection-start-line="22" selection-end-line="37" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sccs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -658,14 +601,35 @@
     <entry file="file://$PROJECT_DIR$/GetMedian_heaps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/median_maint.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2sum.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Other Algorithms/Tries.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="74" column="78" lean-forward="true" selection-start-line="74" selection-start-column="78" selection-end-line="74" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sccs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
         </state>
       </provider>
     </entry>
