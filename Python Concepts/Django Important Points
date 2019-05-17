@@ -1,0 +1,59 @@
+you can have project level modules (e.g., Django’s manage.py) and site level modules. In the latter case, your custom modules should go in the same folder as your settings.py file.
+A Django Framework can consist of View Logic and App Related Logic. App Related Logic Reside in e.g db_utils.py while view logic reside in views.py
+Django Follows MVT arch. MODEL->ORM(Data Layer)->(Interact with Classes). View performs business logic and sends data to the client side in a bundeled object.(Template - HTML/CSS)
+Django Project consists of apps. Django itself is a collection of apps. Can rename folder names. Django's apps logic runs through entire framework, these include auth,sessions,messages,templates.
+Apps Implement specific functionality and provide a level of abstraction.
+Django , the view presents the model to the client as an HTTP response. 
+
+The next point to note is that the Django framework encapsulates the model, view logic and business logic. In some tutorials, it’s been said that the Django framework is the controller, but that isn’t true either – the Django framework can do much more than respond to user input and interact with data
+
+A perfect example of this extra power is Django middleware which sits between the view and the client-side. Django’s middleware performs critical security and authentication checks before the response is sent to the browser.
+
+A Django app is a self contained package that should only do one thing. For example a blog, a membership app or an event calendar. You will notice at the bottom of Figure 3.4 there’s an extra package called Django Apps
+
+Not only do they allow you to add functionality to a Django project without interfering with other parts of the website, but apps are designed to be portable, so you can use one app in multiple projects.
+
+If you were wondering, EventsConfig by default contains a single configuration option – the name of the app (“events”).
+
+URL map content with a request ( from the user)
+Django's URL package maps the url to a function or a Class.
+class EventConfig (Configuration of an app) usually the name , invoked by installed apps from settings.py.
+
+Note that a URL doesn’t have to map to a view – it can map to any module in your Django app. For example, you may have a set of wireless environmental sensors that post data back to the server. You could have a custom module called sensors.py that has a function or class that records the sensor data to your database, all without ever touching a view.
+
+All models inherit from django's model class.
+
+Retrieving objects from the DataBase :-
+However, the get() method only works for single objects. If your search term returns multiple records, you will get an error
+
+If you want to return all records in the database table with filter, you leave the query string blank:
+Event.objects.filter()
+Ordering objects in queryset -
+Event.objects.order_by("name") // -name for reverse ordering.
+
+You can also sort by multiple fields:
+
+>>> Event.objects.order_by("manager", "name")
+
+Default Ordering - 
+Django solves this issue with the ordering attribute of Django models’ class Meta method. More about the class Meta method
+
+It’s very common to want to set a sort order on a subset of your database records. You achieve this in Django by chaining lookups. 
+Event.objects.filter(manager="Bob").order_by("name")
+
+Slicing objects from the query set.
+What you can’t do is use negative indexing
+User reverse sort for that
+Picture.objects.filter(artist = "abc").order_by("-name")[0]
+Efficeint way to update entries :-
+Event.objects.filter(id=6).update(event_date="2019-01-26 17:00")
+update() has an integer return value – the number of records updated
+You can also use update to modify multiple records
+Event.objects.filter(venue="McIvor's Bar").update(venue="Ripemoff Casino")
+Deleting Records - 
+ Event.objects.filter(name__contains="Test").delete() // can delete multiple records also this way.
+ 
+ Database normalization is the process of designing your tables to minimize or eliminate data repetition. In simple term, normalization is the process of keeping related data in separate tables and linking tables via relationships
+ 
+ This pattern must be the last entry in the urlpatterns list. The reason for this will become apparent in a later chapter.
+ Reference to app's url via path('',include(app.urls)) should be the last thing because, for some reasons.
