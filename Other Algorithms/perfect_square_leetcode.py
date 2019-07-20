@@ -3,6 +3,8 @@ def find_perfect_square_or_not(num):
 
 
 def binary_search(num):
+    """finds if num is perect square or not using binary 
+    search algorithm"""
     list_arr = range(num//2 + 2)
     low = 0
     high = len(list_arr)-1
