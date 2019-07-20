@@ -5,6 +5,11 @@ The algorithm which I am going to implement works as follows -
 2. So, Whenever we encounter 0 we add it to the start of the array.
 3. Whenever we encounter a one we swap it with the element next to it and move forward the 1's pointer.
 I guess this is it. And it's making use of two pointers only. Somewhat similar to pivotization in randomized quick sort algorithm."""
+
+"""This algorithm makes use of the pivot concept in the quick sort algorithm.
+Make one as a pivot.
+Additional use of left pointer to group all ones.
+"""
 from collections import Counter
 
 array = [2, 0, 2, 1, 1, 0]
