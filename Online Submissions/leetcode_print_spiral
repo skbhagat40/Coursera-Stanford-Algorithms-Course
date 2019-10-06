@@ -1,0 +1,69 @@
+Given no. n, print a matrix in spiral form that counts upto n*n;
+My Solution -
+
+# code to print a square matrix in spiral form.
+class PrintSpiral(object):
+    start = 1
+    lc, rc, tc, bc = 0, 0, 0, 0
+
+    def __init__(self, n):
+        self.n = n
+        self.l = n
+        self.res = [[0]*n for i in range(n)]
+
+    def printMatrix(self):
+        while self.start <= self.n * self.n:
+            self.fillTop()
+            print('*'*10)
+            print('after top', self.res)
+            print('*'*10)
+            self.fillRight()
+            print('*' * 10)
+            print('after right', self.res)
+            print('*' * 10)
+            self.fillBottom()
+            print('*' * 10)
+            print('after bottom', self.res)
+            print('*' * 10)
+            self.fillLeft()
+            print('*' * 10)
+            print('after left', self.res)
+            print('*' * 10)
+            print('resulting matrix', self.res)
+
+    def fillTop(self):
+        for i in range(self.lc, self.l-self.rc):
+            self.res[self.tc][i] = self.start
+            self.start += 1
+        self.tc += 1
+    def fillRight(self):
+        for i in range(self.tc, self.l - self.bc):
+            self.res[i][self.l-self.rc-1] = self.start
+            self.start += 1
+        self.rc += 1
+    def fillBottom(self):
+        print('bottom called', self.lc, self.rc, self.l-self.rc, 'res mat before', self.res)
+        print('the loop', self.l-self.rc-1, self.lc, -1)
+        # if self.start >= self.n * self.n:
+        #     return
+        for i in range(self.l-self.rc, self.lc, -1):
+            # if self.l-self.rc < self.lc:
+            #     print('breaking')
+            #     return
+            # if self.start >= self.n * self.n:
+            #     return
+            print('i', i)
+            self.res[self.l - self.bc - 1][i-1] = self.start
+            self.start += 1
+        self.bc += 1
+
+    def fillLeft(self):
+        print('left called', self.l-self.bc, self.tc)
+        for i in range(self.l - self.bc, self.tc,  -1):
+            print('left i', i)
+            self.res[i-1][self.lc] = self.start
+            self.start += 1
+        self.lc += 1
+
+solObj = PrintSpiral(6)
+solObj.printMatrix();
