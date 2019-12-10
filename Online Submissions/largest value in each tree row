@@ -1,0 +1,32 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution:
+    def largestValues(self, root: TreeNode) -> List[int]:
+        if root is None:
+            return
+        from collections import defaultdict
+        self.paths = defaultdict(list)
+        initpath = [root.val]
+        list_of_paths = [initpath]
+        self.dfs(root, 0)
+        print(self.paths)
+        return [max(el) for el in self.paths.values()]
+    def getChildren(self,node):
+        res = []
+        if node is not None:
+            if node.left is not None:
+                res.append(node.left)
+            if node.right is not None:
+                res.append(node.right)
+        return res
+    def dfs(self, node, level):
+        if node is not None:
+            self.paths[level].append(node.val)
+            level += 1
+        for ch in self.getChildren(node):
+            self.dfs(ch, level)
