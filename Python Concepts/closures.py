@@ -6,3 +6,5 @@ def getMultiplier(a):
 # usage
 multiplierOf5 = getMultiplier(5)
 multiplierOf5(2) // Outputs 10.
+
+# One Benefit of Closure is that it implements the concept of code abstraction / code hiding. Client needs not to know the inner impementation
