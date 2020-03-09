@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9394372-3a16-4c2a-8da5-d3735322e083" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Python Concepts/python-talks/pycon-seattle/context_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python Concepts/python-talks/pycon-seattle/decorators.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python Concepts/python-talks/pycon-seattle/demo_implementation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python Concepts/python-talks/pycon-seattle/generator_ex.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python Concepts/python-talks/pycon-seattle/partial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python Concepts/python-talks/pycon-seattle/yield.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python Concepts/python-talks/beautiful-python/beautiful_python.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/courseraAlgo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/courseraAlgo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python Concepts/python-talks/pycon-seattle/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Python Concepts/python-talks/pycon-seattle/README.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,12 +35,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Python.2sum">
+  <component name="RunManager">
     <configuration name="2sum" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="courseraAlgo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -156,22 +152,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Python.binary_search_tree" />
-      <item itemvalue="Python.HeapSort" />
-      <item itemvalue="Python.GetMedian_heaps" />
-      <item itemvalue="Python.median_maint" />
-      <item itemvalue="Python.2sum" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.2sum" />
-        <item itemvalue="Python.median_maint" />
-        <item itemvalue="Python.binary_search_tree" />
-        <item itemvalue="Python.GetMedian_heaps" />
-        <item itemvalue="Python.HeapSort" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -185,7 +165,10 @@
       <updated>1552797468231</updated>
       <workItem from="1583045317675" duration="7071000" />
       <workItem from="1583162736262" duration="5469000" />
-      <workItem from="1583254250083" duration="7588000" />
+      <workItem from="1583254250083" duration="8415000" />
+      <workItem from="1583294798489" duration="155000" />
+      <workItem from="1583343359895" duration="3019000" />
+      <workItem from="1583733220728" duration="1580000" />
     </task>
     <servers />
   </component>
@@ -193,43 +176,26 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="259" y="52" key="CommitChangelistDialog2" timestamp="1583122488869">
+    <state x="259" y="52" key="CommitChangelistDialog2" timestamp="1583346539024">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="259" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1583122488869" />
+    <state x="259" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1583346539024" />
     <state x="229" y="89" key="SettingsEditor" timestamp="1583077610820">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1583077610820" />
-    <state x="399" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1583164140989">
+    <state x="399" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1583343496908">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="399" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1583164140989" />
+    <state x="399" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1583343496908" />
+    <state x="399" y="281" key="com.intellij.ide.util.TipDialog/0.23.1440.825@0.23.1440.825" timestamp="1583294811449" />
     <state x="386" y="207" width="667" height="486" key="find.popup" timestamp="1583071656094">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="386" y="207" width="667" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1583071656094" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1583258775116">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1583733257623">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1583258775116" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url />
-          <line>70</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-      <default-breakpoints>
-        <breakpoint type="python-exception">
-          <properties notifyOnTerminate="true" exception="BaseException">
-            <option name="notifyOnTerminate" value="true" />
-          </properties>
-        </breakpoint>
-      </default-breakpoints>
-    </breakpoint-manager>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1583733257623" />
   </component>
 </project>
