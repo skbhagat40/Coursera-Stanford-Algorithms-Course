@@ -1,9 +1,12 @@
 class BaseMeta(type):
-    def __new__(cls, *args, **kwargs):
+    def __new__(cls, name, bases, body):
         print('hook to tap into instantiation of classes derived from base')
         print('arguments are')
-        print(cls, args, kwargs)
-        return super().__new__(cls, *args, **kwargs)
+        print(cls)
+        print(name)
+        print(bases)
+        print(body)
+        return super().__new__(cls, name, bases, body)
 
 
 class Base(metaclass=BaseMeta):

@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9394372-3a16-4c2a-8da5-d3735322e083" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Python Concepts/python-talks/beautiful-python/beautiful_python.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/courseraAlgo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/courseraAlgo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Online Submissions/daily-coding-problems/march17.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Concepts/python-talks/pycon-seattle/init_subclass.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python Concepts/python-talks/pycon-seattle/init_subclass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Concepts/python-talks/pycon-seattle/metaclasses.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python Concepts/python-talks/pycon-seattle/metaclasses.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,20 +29,23 @@
     </option>
   </component>
   <component name="ProjectId" id="1YW545VUcEf7Or2RImOjjDekwCm" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.2sum">
     <configuration name="2sum" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="courseraAlgo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -168,12 +172,18 @@
       <workItem from="1583254250083" duration="8415000" />
       <workItem from="1583294798489" duration="155000" />
       <workItem from="1583343359895" duration="3019000" />
-      <workItem from="1583733220728" duration="1580000" />
+      <workItem from="1583733220728" duration="2278000" />
+      <workItem from="1583986456655" duration="900000" />
+      <workItem from="1583990893124" duration="627000" />
+      <workItem from="1584466656512" duration="442000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="259" y="52" key="CommitChangelistDialog2" timestamp="1583346539024">
@@ -184,11 +194,12 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1583077610820" />
-    <state x="399" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1583343496908">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="399" y="283" key="com.intellij.ide.util.TipDialog" timestamp="1584466737107">
+      <screen x="0" y="23" width="1440" height="830" />
     </state>
-    <state x="399" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1583343496908" />
+    <state x="399" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1583986532764" />
     <state x="399" y="281" key="com.intellij.ide.util.TipDialog/0.23.1440.825@0.23.1440.825" timestamp="1583294811449" />
+    <state x="399" y="283" key="com.intellij.ide.util.TipDialog/0.23.1440.830@0.23.1440.830" timestamp="1584466737107" />
     <state x="386" y="207" width="667" height="486" key="find.popup" timestamp="1583071656094">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

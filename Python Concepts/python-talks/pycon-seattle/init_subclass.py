@@ -1,13 +1,14 @@
 class Base:
-    def __init_subclass__(cls, **kwargs):
+    def __init_subclass__(cls, foo=None, **kwargs):
         print("tapping into init subclass")
         print("arguments are")
-        print(cls, kwargs)
-        return super().__init_subclass__()
+        print(cls, foo, kwargs)
+        return super().__init_subclass__(**kwargs)
 
 
 class Derived(Base):
-    pass
+    def foo(self):
+        print('foo')
 
 
 client = Derived()
