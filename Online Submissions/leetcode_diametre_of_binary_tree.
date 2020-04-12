@@ -1,0 +1,17 @@
+class Solution:
+    def diameterOfBinaryTree(self, root: TreeNode) -> int:
+        self.root = root
+        self.max = 0
+        if root is None:
+            return 0
+        self.traverse(root)
+        return self.max
+    
+    def traverse(self, root):
+        if root is None:
+            return -1
+        else:
+            dl = 1 + self.traverse(root.left)
+            dr = 1 + self.traverse(root.right)
+            self.max = max(dl + dr , self.max)
+            return max(dl , dr)
