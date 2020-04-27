@@ -15,3 +15,8 @@ class Solution:
                     counts_arr[idx+1] += el-1
                     count += el-1
         return count
+"""
+Things learned can't iterate over a dictionary while changing it's values.
+using array to mantain frequencies and iterate over the array not the copy.
+in case of deletion iterate over copy and do some len checking.
+"""
