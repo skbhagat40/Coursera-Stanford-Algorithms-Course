@@ -1,0 +1,3 @@
+"""
+Generate subsets with duplicates.
+"""

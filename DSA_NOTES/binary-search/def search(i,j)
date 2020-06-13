@@ -1,0 +1,31 @@
+def search(i,j)
+    if arr[i][j] == result:
+        return arr[i][j]
+    if arr[i][j] == visited
+        return 
+    else:
+        arr[i][j] = visited
+    search (i,j+1)
+    search(i, j-1)
+    search(i-1, j)
+
+store column array, to store i,j col[idx] = row positon, use formula for diagonals.
+
+def search(i,j)
+    check all condition met (no. of queens) # row == N, same as subsets question , check for after index, done with all.
+        return true
+    (check_column
+    check_diagonal) is valid and pass the column
+        place the queen update the column
+    go to next row 
+        if update the row and placed go to next row #
+
+def checkSoduku(row, col)
+
+    for i in range(n*m):
+        for j in range(m):
+            for k in range(1,N):
+                A[i][j] = k
+                check_valid
+                break // move to next block.
+end
