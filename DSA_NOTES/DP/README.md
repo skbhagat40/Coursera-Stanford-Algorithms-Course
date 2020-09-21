@@ -91,6 +91,9 @@ class Solution:
 	            return res
 	        p_cost, p_cap = dp(idx-1, cap)
 	        curr_cost, curr_cap = dp(idx, cap-B[idx]) # can eat a dish twice, similar to regex matching dp problem.
+		"""
+		The return value is cost, capacity similar to the maxVal problem (MIT online course)
+		"""
 	        curr_cost += C[idx]
 	        if curr_cap == 0 and p_cap ==0:
 	            if curr_cost < p_cost:
@@ -107,3 +110,33 @@ class Solution:
 	        return res
 	    return sum([dp(len(B)-1, el)[0] for el in A])
 ```
+
+Word Break Problem.
+
+Break a string such that all items are present in wordList.
+
+DP - Go over all possible substrings, check if we can generate that substring from smaller substrings.
+
+Code - 
+
+```
+A - given sting to break
+B - dictionary of words
+dp = [False]*(len(A)+1)
+dp[0] = True
+for i in range(1, len(A)+1):
+	for j in range(i):
+		if A[j:i] in B and dp[j]:
+			dp[i] = True
+			break
+return dp[-1]
+"""
+Optimization - since we know, what all word_lens are going to be present. we can skip the substring that don't match the given len
+"""
+for i in range(1, len(A)+1):
+	for word in B:
+		if A[i-len(word):i] in d and dp[i-len(word)]:
+			dp[i] = True
+			break
+```
+
