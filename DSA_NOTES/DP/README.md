@@ -66,3 +66,44 @@ class Solution:
 _let's see , where my approach went wrong,
 
 Initially I thought that for the first row, everything is possible , but in reality only the starting item is possible.
+
+Problem - Given an array of capacites of friends, array of filling capacities of dish, and cost of each dish, we need to minimize the overall cost such that,every person, eats item == filing capacity.
+
+Approach - Use DP. Possiblity, eats a dish , doesn't eats it, eats it twice. Goal of dp => to minimize the cost.
+Solution - 
+```
+import sys
+sys.setrecursionlimit(100000)
+class Solution:
+	# @param A : tuple of integers
+	# @param B : tuple of integers
+	# @param C : tuple of integers
+	# @return an integer
+	def solve(self, A, B, C):
+	    cache = {}
+	    def dp(idx, cap):
+	        if idx < 0:
+	            return 0, cap
+	        if cap <= 0:
+	            return 0, cap
+	        res = cache.get((idx, cap), None)
+	        if res is not None:
+	            return res
+	        p_cost, p_cap = dp(idx-1, cap)
+	        curr_cost, curr_cap = dp(idx, cap-B[idx]) # can eat a dish twice, similar to regex matching dp problem.
+	        curr_cost += C[idx]
+	        if curr_cap == 0 and p_cap ==0:
+	            if curr_cost < p_cost:
+	                res =  curr_cost, curr_cap
+	            else:
+	                res =  p_cost, p_cap
+	        elif curr_cap == 0:
+	            res =  curr_cost, curr_cap
+	        elif p_cap == 0:
+	            res =  p_cost, p_cap
+	        else:
+	            res = float('inf'), float('inf')
+	        cache[(idx, cap)] = res
+	        return res
+	    return sum([dp(len(B)-1, el)[0] for el in A])
+```
