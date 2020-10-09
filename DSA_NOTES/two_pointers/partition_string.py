@@ -10,7 +10,8 @@ def partition_string(S):
   ans = []
   for i in range(len(S)):
     char = S[i]
-    if right_most[char] == i:
+    right = max(right, rightmost[char])
+    if right == i:
       ans.append(i-left_pos)
       left_pos = i + 1
   return ans
