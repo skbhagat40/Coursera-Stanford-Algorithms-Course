@@ -12,3 +12,6 @@ for price in prices:
   max_profit = max(max_profit, current_min - price)
 ```
 **I think in general, in subarray, subsequence type problems, kaden's algo (dp/ memoizing past values) can be used to optimize the n2 complexity to n.
+
+Another example using stack - finding 132 pattern.
+stack to keep track for all the numbers , maximum numbers to the right so far, number in stack is s2 ( greatest one ). popped one is s2. s1 is the incoming element.
