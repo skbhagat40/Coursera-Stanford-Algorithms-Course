@@ -15,3 +15,5 @@ for price in prices:
 
 Another example using stack - finding 132 pattern.
 stack to keep track for all the numbers , maximum numbers to the right so far, number in stack is s2 ( greatest one ). popped one is s2. s1 is the incoming element.
+
+Sliding window maximum, using deque concept - https://github.com/skbhagat40/LeetCode-Challanges/blob/master/november/29.py
