@@ -22,8 +22,8 @@ Propagating writes to slaves -
   Cons - 
   Data inconsistency.
   
-  Write Heavy Read Super Heavy - Multi master multi slave systems.
+  Write Heavy Read Super Heavy - Multi master multi slave systems. If one master goes down, online syncing - no data loss, quorum - would have updated to slave, new master eventually updates itself and other master.
   
-  Write Heavy - Multi master system.
+  Write Heavy - Multi master system with a LB.
   
   Other Appraoch To scale storage - Federated data systems. ( e.g Uber Eats vs Cab) Complex to implement coz of aggregation.
