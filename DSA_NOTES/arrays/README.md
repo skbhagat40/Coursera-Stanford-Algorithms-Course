@@ -28,3 +28,11 @@ class Solution:
 
 Approach - for each index store the min. B[i] before it which staisfies the condition A[j] < A[i]. for each i iterate, we already have one fixed no i with cost B[i]
 . The other is j and the third is the min. which we found for j in previous iterations. This is memoization, one of the most useful techniques in arrays.
+
+** Rain water trap **
+Dp based solution. For each building, look left, look right, min(max_left, max_right) - height.
+Approach using stack - stack ensures this property that, last element in the stack is just greater.
+Approach using two pointer ==> similar to the question, max water trapped.
+
+Two pointer approach - Observation => while right_max > left_max , the water trapped depends on the left_max and vice versa. mantain left_max and right_max. move the left and right pointers accordingly. Example of problem, where two pointers is applied on an array which is not sorted.
+
