@@ -54,6 +54,10 @@ keep incrementing the index with min value. keep updating answer. stop when any 
 
 4. Container with maximum area.
 
+6. Trapping Rain water -> https://leetcode.com/explore/interview/card/amazon/76/array-and-strings/2975/. similar to container with max area.
+
+8. Merge k sorted lists. (possibly)
+
 Observation- for a[i] we need to find farthest j, such that a[j] >= a[i]. If not, we find the answer for a[j].
 
 **Use Cases of Sliding Window**
