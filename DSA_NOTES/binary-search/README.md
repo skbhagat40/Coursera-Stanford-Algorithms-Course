@@ -107,3 +107,6 @@ Observation - Similiar to Book Partition. Need to minimize the max. paint space 
    The problem here is both base and no. of digits are varying, so can't apply binary search here.
    If we fix the no. of digits then we can use binary search for base.
    Return the minimum base among all possibe bases for all values of digits.
+   
+# minimum time required to transport boxes. -> binary search over the answer space.
+# greedy not possible coz there can be some combination. and boxes has to be transported in order.
