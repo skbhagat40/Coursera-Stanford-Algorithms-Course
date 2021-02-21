@@ -36,3 +36,6 @@ Approach using two pointer ==> similar to the question, max water trapped.
 
 Two pointer approach - Observation => while right_max > left_max , the water trapped depends on the left_max and vice versa. mantain left_max and right_max. move the left and right pointers accordingly. Example of problem, where two pointers is applied on an array which is not sorted.
 
+**Integer to roman** => divmod
+**Roman to integer** => scan , add value, if smaller arg is present, subtract the value and add.
+
