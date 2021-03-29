@@ -45,7 +45,7 @@ pluggy==0.8.0
 protobuf==3.6.1
 psycopg2==2.7.7
 py==1.7.0
-Pygments==2.3.1
+Pygments==2.7.4
 pyparsing==2.2.0
 pypiwin32==223
 PyQt5==5.11.2
